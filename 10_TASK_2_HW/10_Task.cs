@@ -18,7 +18,7 @@
             int number = GetRandomNumber(100,1000);
             string array = Convert.ToString(number);
             int secondChar = Convert.ToInt32(array[1].ToString());
-            Console.WriteLine($"Вторым числом в трехзначном {number} является {secondChar}");
+            Console.WriteLine($"Вторая цифра в трехзначном {number} является {secondChar}");
 
         }
     }
