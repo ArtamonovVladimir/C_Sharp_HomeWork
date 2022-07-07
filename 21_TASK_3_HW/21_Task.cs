@@ -41,7 +41,7 @@
         public static void Main(string[] args)
         {
             int number = 3;
-            double pointCalc = 0;
+            //double pointCalc = 0;
             double[] pointA = new double[number];
             double[] pointB = new double[number];
             GetIntputArray(pointA, pointB);
