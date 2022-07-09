@@ -17,7 +17,7 @@
                 return;
             }
             int[] numbersArray = Massive(inputText);
-            PrintArray(numbersArray, 0);
+            //PrintArray(numbersArray, 0);
             int result = Sum(numbersArray);
             Print(inputText, result);      
             
@@ -56,7 +56,7 @@
             {
                 return;
             }
-            //Console.WriteLine(a[index]);
+            Console.WriteLine(a[index]);
             PrintArray(a, index + 1);
         }
 
