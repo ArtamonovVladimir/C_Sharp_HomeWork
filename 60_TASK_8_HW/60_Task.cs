@@ -1,4 +1,4 @@
-﻿namespace VladimirArtamnov
+﻿namespace VladimirArtamonov
 {
     public static class HomeWorkTask60
     {
