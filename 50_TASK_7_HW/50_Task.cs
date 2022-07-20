@@ -16,10 +16,11 @@
             int columnLength = new Random().Next(1, 10);
             Console.WriteLine("Введите позицию элемента по строке:");
             int rowIndex = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введитепозицию элемента по колонке:");
+            Console.WriteLine("Введите позицию элемента по колонке:");
             int columnIndex = Convert.ToInt32(Console.ReadLine());
             if (rowIndex > rowLength - 1 || columnIndex > columnLength - 1)
             {
+                Console.Write($"В массиве {rowLength} на {columnLength}. ");
                 Console.WriteLine("Такого элемента нет!!!");
             }
             else
