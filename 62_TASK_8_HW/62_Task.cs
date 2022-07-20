@@ -34,28 +34,63 @@
             //Console.WriteLine();
         }
 
+        // public static void SpiralArray(int[,] array)
+        // {
+        //     int rowIndex = 0,
+        //         columnIndex = 0,
+        //         start = 0,
+        //         end = 0;
+
+
+        //     for (int number = 1; number <= array.GetLength(0) * array.GetLength(1); number++)
+        //     {
+
+        //         array[rowIndex, columnIndex] = number;
+        //         if (rowIndex == start && columnIndex < array.GetLength(1) - 1 - end)
+        //         {
+        //             columnIndex++;
+        //         }
+
+        //         else if (rowIndex < array.GetLength(0) - 1 - end && columnIndex == array.GetLength(1) - 1 - end)
+        //         {
+        //             rowIndex++;
+        //         }
+        //         else if (rowIndex == array.GetLength(0) - 1 - end && columnIndex > start)
+        //         {
+        //             columnIndex--;
+        //         }
+        //         else
+        //         {
+        //             rowIndex--;
+        //         }
+        //         if (rowIndex == start + 1 && columnIndex == start && start != array.GetLength(1) - end - 1)
+        //         {
+        //             start++;
+        //             end++;
+        //         }
+
+        //     }
+        // }
         public static void SpiralArray(int[,] array)
         {
             int rowIndex = 0,
                 columnIndex = 0,
-                start = 0,
-                end = 0;
-
+                changeBorders = 0;
 
             for (int number = 1; number <= array.GetLength(0) * array.GetLength(1); number++)
             {
 
                 array[rowIndex, columnIndex] = number;
-                if (rowIndex == start && columnIndex < array.GetLength(1) - 1 - end)
+                if (rowIndex == changeBorders && columnIndex < array.GetLength(1) - 1 - changeBorders)
                 {
                     columnIndex++;
                 }
 
-                else if (rowIndex < array.GetLength(0) - 1 - end && columnIndex == array.GetLength(1) - 1 - end)
+                else if (rowIndex < array.GetLength(0) - 1 - changeBorders && columnIndex == array.GetLength(1) - 1 - changeBorders)
                 {
                     rowIndex++;
                 }
-                else if (rowIndex == array.GetLength(0) - 1 - end && columnIndex > start)
+                else if (rowIndex == array.GetLength(0) - 1 - changeBorders && columnIndex > changeBorders)
                 {
                     columnIndex--;
                 }
@@ -63,10 +98,9 @@
                 {
                     rowIndex--;
                 }
-                if (rowIndex == start + 1 && columnIndex == start && start != array.GetLength(1) - end - 1)
+                if (rowIndex == changeBorders + 1 && columnIndex == changeBorders && changeBorders != array.GetLength(1) - changeBorders - 1)
                 {
-                    start++;
-                    end++;
+                    changeBorders++;
                 }
 
             }
