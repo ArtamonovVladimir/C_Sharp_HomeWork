@@ -34,32 +34,28 @@
             //Console.WriteLine();
         }
 
-
         public static void SpiralArray(int[,] array)
         {
-            int rowLength = array.GetLength(0),
-                columnLength = array.GetLength(1),
-                rowIndex = 0,
+            int rowIndex = 0,
                 columnIndex = 0,
-                rowStart = 0,
-                rowEnd = 0,
-                columnStart = 0,
-                columnEnd = 0;
+                start = 0,
+                end = 0;
+
 
             for (int number = 1; number <= array.GetLength(0) * array.GetLength(1); number++)
             {
 
                 array[rowIndex, columnIndex] = number;
-                if (rowIndex == rowStart && columnIndex < array.GetLength(1) - 1 - columnEnd)
+                if (rowIndex == start && columnIndex < array.GetLength(1) - 1 - end)
                 {
                     columnIndex++;
                 }
 
-                else if (rowIndex < array.GetLength(0) - 1 - rowEnd && columnIndex == array.GetLength(1) - 1 - columnEnd)
+                else if (rowIndex < array.GetLength(0) - 1 - end && columnIndex == array.GetLength(1) - 1 - end)
                 {
                     rowIndex++;
                 }
-                else if (rowIndex == array.GetLength(0) - 1 - rowEnd && columnIndex > columnStart)
+                else if (rowIndex == array.GetLength(0) - 1 - end && columnIndex > start)
                 {
                     columnIndex--;
                 }
@@ -67,12 +63,10 @@
                 {
                     rowIndex--;
                 }
-                if (rowIndex == rowStart + 1 && columnIndex == columnStart && columnStart != array.GetLength(1) - columnEnd - 1)
+                if (rowIndex == start + 1 && columnIndex == start && start != array.GetLength(1) - end - 1)
                 {
-                    rowStart++;
-                    rowEnd++;
-                    columnStart++;
-                    columnEnd++;
+                    start++;
+                    end++;
                 }
 
             }
