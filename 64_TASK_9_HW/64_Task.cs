@@ -14,20 +14,19 @@
             Console.Write("\nВведите значения N:\t");
             int numberN = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nНатуральные числа в промежутке от M до N:\t");
-            RecursionPrintOfNaturalNumbers(numberM, numberN);
+            Console.Write(RecursionPrintOfNaturalNumbers(numberM, numberN));
         }
 
 
-        public static void RecursionPrintOfNaturalNumbers(int startNumber, int endNumber)
+        public static string RecursionPrintOfNaturalNumbers(int startNumber, int endNumber)
         {
             if (startNumber > endNumber)
             {
-                return;
+                return String.Empty;
             }
             else
             {
-                Console.Write($"{startNumber} ");
-                RecursionPrintOfNaturalNumbers(startNumber + 1, endNumber);
+                return $"{startNumber} " + RecursionPrintOfNaturalNumbers(startNumber + 1, endNumber);
             }
         }
     }
